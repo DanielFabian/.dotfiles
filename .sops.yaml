@@ -1,0 +1,7 @@
+keys:
+  - &dany_thinkpad age1sn77e7mr0kx4z36xna8has23g0q6ehwr680lrunlfg36mmvh5vyq25w3ql
+creation_rules:
+  - path_regex: secrets/[^/]+\.yaml$
+    key_groups:
+      - age:
+        - *dany_thinkpad
