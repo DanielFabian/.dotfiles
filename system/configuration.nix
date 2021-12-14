@@ -10,6 +10,7 @@
       ./thinkpad/hardware-configuration-zfs.nix
       ./thinkpad/filesystems.nix
       ./thinkpad/zfs.nix
+      ./wifi.nix
     ];
 
   nix.package = pkgs.nixFlakes;
@@ -18,16 +19,7 @@
   '';
 
   networking.hostName = "thinkpad"; # Define your hostname.
-  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.wireless.environmentFile = config.sops.secrets.wifi.path;
-  networking.wireless.networks = { 
-    "Disc&PoI-WLAN".psk = "@Disc_PoI_WLAN_PSK@";
-  };
-
-  sops.secrets.wifi.sopsFile = ../secrets/wifi.yaml;
   sops.age.keyFile = "/home/dany/.config/sops/age/keys.txt";
-
-  networking.networkmanager.enable = false;
 
   # Set your time zone.
   time.timeZone = "Europe/Zurich";
