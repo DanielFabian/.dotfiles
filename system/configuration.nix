@@ -7,7 +7,9 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./hardware-configuration-zfs.nix ./zfs.nix
+      ./thinkpad/hardware-configuration-zfs.nix
+      ./thinkpad/filesystems.nix
+      ./thinkpad/zfs.nix
     ];
 
   nix.package = pkgs.nixFlakes;
