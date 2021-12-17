@@ -2,6 +2,9 @@
 {
   imports = [
     ../neovim.nix
+    ../fontconfig.nix
+    ../alacritty.nix
+    ../kitty.nix
   ];
 
   home.packages = with pkgs; [
