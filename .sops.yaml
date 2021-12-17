@@ -2,7 +2,7 @@ keys:
   - &dany_thinkpad age1sn77e7mr0kx4z36xna8has23g0q6ehwr680lrunlfg36mmvh5vyq25w3ql
   - &dany_thinkpad_machine_key age14wpeg0q64cxc35xw9098gxh7r6d3vkt4yu7vn8rr4n487dyrfdfs6kjj2a
 creation_rules:
-  - path_regex: secrets/[^/]+\.yaml$
+  - path_regex: .yaml$
     key_groups:
       - age:
         - *dany_thinkpad
