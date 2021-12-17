@@ -19,7 +19,8 @@
   '';
 
   networking.hostName = "thinkpad"; # Define your hostname.
-  sops.age.keyFile = "/home/dany/.config/sops/age/keys.txt";
+
+  sops.defaultSopsFile = ./secrets/default.yaml;
 
   # Set your time zone.
   time.timeZone = "Europe/Zurich";
@@ -45,7 +46,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.desktopManager.xfce.enable = true;
 
 
   

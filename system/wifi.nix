@@ -6,6 +6,6 @@
     networks."Disc&PoI-WLAN".psk = "@Disc_PoI_WLAN_PSK@";
   };
 
-  sops.secrets.wifi.sopsFile = ./secrets/wifi.yaml;
+  sops.secrets.wifi = {};
 }
 
